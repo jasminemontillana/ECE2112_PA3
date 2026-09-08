@@ -22,7 +22,7 @@ This repository contains the completed Programming Assignment 3 for ECE2112: Adv
 ```
 
 cars = pd.read_csv('cars.csv')
-df = cars
+df = carsl
 
 print(df.shape)
 print(list(df.columns))
@@ -30,7 +30,21 @@ print(list(df.columns))
 cars_6_to_10 = cars.iloc[6:11]
 df.loc[6:10, ['Model', 'mgp', 'cyl', 'hp', 'gear']]
 ```
+## B. Model Lookup
+**Objective:** Use Boolean indexing on the `Model` column to locate specific vehicle models without hard-coding row number.
 
+**Key functions and methods used in this problem:**
+`df.['Model'] == 'Toyota Corolla'`: Generates a Boolean Series (mask) returning `True` for rows matching the specidied vehicle name.
 
+`df.loc[condition]`: Filters th DaraFrame based on the Boolean mask to extract matching rows.
 
+`df.loc[condition, ['Model', 'mgp', 'hp', 'wt']]`: Combines Boolean indexing for row selection with explicit label selection for target columns. 
 
+**Below is the complete Pything code implementation for this problem:**
+```
+toyota = df.loc[df['Model']=='Toyota Corolla']
+print(toyota)
+
+Pontiac = df.loc[df['Model']=='Pontiac Firebird', ['Model', 'mpg','hp', 'wt']]
+print(Pontiac)
+```
