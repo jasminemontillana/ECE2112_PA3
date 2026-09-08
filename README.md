@@ -48,3 +48,27 @@ print(toyota)
 Pontiac = df.loc[df['Model']=='Pontiac Firebird', ['Model', 'mpg','hp', 'wt']]
 print(Pontiac)
 ```
+## C. Multi-Model Subsetting
+**Objective:** Create a subset named `selected_cars` containing records for three specific car models (`Datasum 710`, `Lotus Europa`, `Ferrari Dino`), showing only the `Model`,`mpg`, `cyl`, `hp`, and `gear` columns.
+
+**Key functions and methods used in this problem:**
+`.isin(['Datasum 710', 'Lotus Europa', 'Ferrari Dino'])`: Checks wheater elements in the `Model` column are contianed in the specidied target array/list.
+`d.loc[mask, columns]`: Performs simultaneous row filtering via `.isin()` and column selection via exact column label lists. 
+
+**Below is the complete Python code implementation for this problem:**
+```
+selected_cars = df.loc[df['Model'].isin(['Datsun 710', 'Lotus Europa', 'Ferrari Dino']), ['Model','mpg', 'cyl', 'hp', 'gear']]
+print (selected_cars)
+```
+
+**Required Check (`selected_cars.shape`): ** `(3,5)` (3 rows, 5 columns)
+
+--END--
+
+To access the main Notebook for Programming Assignment 3, click this link:
+
+## README File Version History:
+
+September 8, 2026 Initial Commit
+
+September 9, 2026 Update README 
