@@ -16,4 +16,21 @@ This repository contains the completed Programming Assignment 3 for ECE2112: Adv
 
 `cars.iloc[6:11]`: Selects rows by zero-based positional indexing (rows 6 through 10, inclusive, corresponding to index range `6:11`).
 
-`cars_6_to_10.loc[:, ['Model', 'mgp', 'cyl', 'hp', 'gear']]`
+`cars_6_to_10.loc[:, ['Model', 'mgp', 'cyl', 'hp', 'gear']]` / `df.loc[6:10, ['Model', 'mgp', 'cyl', 'hp', 'gear']]`: Selects specific columns using label-based indexing while keeping the subsetted rows intact. 
+
+**Below is the complete Pythong code implementation for this problem:**
+```
+
+cars = pd.read_csv('cars.csv')
+df = cars
+
+print(df.shape)
+print(list(df.columns))
+
+cars_6_to_10 = cars.iloc[6:11]
+df.loc[6:10, ['Model', 'mgp', 'cyl', 'hp', 'gear']]
+```
+
+
+
+
