@@ -65,9 +65,9 @@ print (selected_cars)
 
 --END--
 
-To access the main Notebook for Programming Assignment 3, click this link:
+To access the main Google Colab Notebook for Programming Assignment 3, click this link: https://colab.research.google.com/github/jasminemontillana/ECE2112_PA3/blob/main/Programming_Assignment_3.ipynb 
 
-## README File Version History:
+**README File Version History:**
 
 September 8, 2026 Initial Commit
 
